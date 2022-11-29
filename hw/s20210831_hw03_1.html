@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW03_1</title>
+        <script>
+        function convertHexademical(binary) {
+            var HD = "0123456789ABCDEF";
+            var rm = [], n, m;
+            var demical = parseInt(binary, 2);
+            while(1){
+                n = demical % 16;
+                m =  HD[n];
+                rm.push(m);
+                demical = parseInt(demical / 16);
+                if (demical === 0){
+                    break;
+                }
+            }
+            var i;
+            for (i = rm.length - 1; i >= 0; i--){
+                document.write(rm[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+ <script>
+        i = prompt("2진수 입력:");
+        convertHexademical(i);
+    </script>
+</body>
+</html>

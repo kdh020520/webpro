@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>취업 정보 계정 만들기</title>
+    <style>
+        .necessity {font-size: 10pt; color: red;}
+        label {display: inline-block; text-align: right; margin-left: 8px; width: 130px; padding-right: 8px}
+        label > span {color: red;}
+        .box {background: lightblue; width: 800px; padding-left: 10px; font-weight: bold;}
+        .button {margin-left: 200px;}
+    </style>
+</head>
+<body>
+<h2>취업 정보 계정 만들기</h2><br>
+<p class="necessity">* 필수 입력 항목</p>
+<form>
+    <p class="box">기본 정보</p>
+    <label>이 름<span>*</span></label><input type="text" size="8"><br>
+    <label>이메일<span>*</span></label><input type="email" size="15" placeholder="id@domain_name"><br>
+    <label> 암호<span>*</span></label><input type="text" size="12"><br>
+    <label>암호 확인<span>*</span></label><input type="text" size="12"><br>
+    <label>모바일 폰<span>*</span></label><input type="tel" size="13" placeholder="010-0000-0000"><br>
+    <label>개인 홈페이지</label><input type="url" size="30" placeholder="http://"><br>
+    <label>주소<span>*</span></label><input type="text" size="30"><br>
+    <p class="box">학력</p>
+    <label>학교명<span>*</span></label><input type="text" size="12"> <br>
+    <label>전공<span>*</span></label><input type="text" size="12"> <br>
+    <label>졸업 여부<span>*</span></label>
+    <select name="graduation">
+        <option value="1" selected>--선택--</option>
+        <option value="2">졸업예정</option>
+        <option value="3">졸업</option>
+    </select><br>
+    <label>졸업(예정)일</label><input type="date" placeholder="연도-월-일"> <br>
+    <p class="box">업무 경력</p>
+    <label>근무업체명</label><input type="text" size="20"> <br>
+    <label>직위</label><input type="text" size="10"> <br>
+    <label>담당 업무</label><textarea cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea> <br>
+    <label>근무 년수</label><input type="number" min="0" max="10" step="0.5"> <br>
+    <p class="box">자기소개서</p>
+    <label>첨부 파일</label><input type="file"> <br><br>
+    <input class="button" type="submit" value="제출"> <input type="reset" value="재작성">
+</form>
+</body>
+</html>
